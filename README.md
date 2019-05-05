@@ -21,9 +21,9 @@ processed 6GB data of 10 million open payment records from Centers of Medicare &
 6. Fintech: lendclub data, flask visualization  
 7. Kaggle MSKCC precision medicine: NLP based gene mutation classification  
 10.GIS  
-12.kaggle zillow
-11.Udacity ML nano degree
-14.kaggle google analytics 
+12.kaggle zillow  
+11.Udacity ML nano degree  
+14.kaggle google analytics  
 
 
   
