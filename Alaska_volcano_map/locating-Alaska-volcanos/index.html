@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Locating Alaska Volcanos</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Locating Alaska Volcanos">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Locating Alaska Volcanos</h1>
+    <h2>A shiny App</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Alasak volcano</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="ak-volcano.jpg" alt="alt text"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Browsed data from Data.gov and found this Alaska volcano dataset</li>
+<li>Data downloaded from <a href="https://www.avo.alaska.edu/volcanoes/latlong.php">https://www.avo.alaska.edu/volcanoes/latlong.php</a></li>
+<li>137 volcanos </li>
+</ol>
+
+<pre><code class="r"># read data
+load(&#39;/Users/YC/github/DevPro-week4/ak.rda&#39;)
+head(ak$Volcano)
+</code></pre>
+
+<pre><code>## [1] &quot;Adagdak&quot;            &quot;Akutan&quot;             &quot;Alagogshak&quot;        
+## [4] &quot;Amak&quot;               &quot;Amchixtam Chaxsxii&quot; &quot;Amukta&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r"># locatoin in longitude and latitude.
+head(ak)
+</code></pre>
+
+<pre><code>##   VolcNameID            Volcano Latitude Longitude Datum
+## 1         52            Adagdak 51.99050 -176.5852 WGS84
+## 2         60             Akutan 54.13308 -165.9855 WGS84
+## 3        128         Alagogshak 58.15730 -155.4000 WGS84
+## 4         33               Amak 55.41728 -163.1469 WGS84
+## 5        296 Amchixtam Chaxsxii 51.84750  179.8297 WGS84
+## 6         20             Amukta 52.49419 -171.2548 WGS84
+##                   loc                                    detail
+## 1   51.9905:-176.5852            Adagdak at 51.9905 : -176.5852
+## 2 54.13308:-165.98555           Akutan at 54.13308 : -165.98555
+## 3      58.1573:-155.4            Alagogshak at 58.1573 : -155.4
+## 4 55.41728:-163.14687             Amak at 55.41728 : -163.14687
+## 5   51.8475:179.82972 Amchixtam Chaxsxii at 51.8475 : 179.82972
+## 6 52.49419:-171.25476           Amukta at 52.49419 : -171.25476
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>App interface</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Select volcanos of interest to see them on map.</li>
+<li>Available at <a href="https://arcadianlyric.shinyapps.io/DevPro-week4/">https://arcadianlyric.shinyapps.io/DevPro-week4/</a></li>
+</ol>
+
+<p><img src="app.png" alt="alt text"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Alasak volcano'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Introduction'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Data'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='App interface'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
