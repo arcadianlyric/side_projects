@@ -1,8 +1,9 @@
 ### side_projects
 1. WeChat data EDA 
+2. detect aneuploidy: a data challenge  
 
 TODO:
-1. detect aneuploidy: a data challenge 
+ 
 build a NGS data aneuploidy classifier with R, interactive UI with Shiny
 2. hackathon_t2d_NGS_prediction: 
 predict Type2 diabetes with machine learning (sklearn, keras, model ensemble) using RNA-seq data
