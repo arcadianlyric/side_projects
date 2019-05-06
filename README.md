@@ -2,6 +2,9 @@
 1. WeChat data EDA 
 2. detect aneuploidy: a data challenge  
 build a NGS data aneuploidy classifier with R, interactive UI with Shiny  
+3. Insight, hackathon-get-better-with-data:
+processed 6GB data of 10 million open payment records from Centers of Medicare & Medical Services (CMS), found states with significant high medical payments  
+4. Alaska volcano map: interactive Rshiny UI  
 
 TODO:
  
@@ -13,6 +16,5 @@ mined 4million Yelp review to find coolest restaurants for recommendation
 8. twitter API data mining: 
 studied public awareness of precision medicine, data cleaning (emotion emoji etc.) 
 most co-accurance words are NIH, government initiatives etc., limited public and biotech industry awareness at 2016  
-9. Insight, hackathon-get-better-with-data:
-processed 6GB data of 10 million open payment records from Centers of Medicare & Medical Services (CMS), found states with significant high medical payments
-11. Alaska volcano map: interactive Rshiny UI  
+
+ 
