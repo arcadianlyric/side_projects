@@ -1,5 +1,5 @@
 ### side_projects
-1. WeChat data explore 
+1. WeChat data EDA 
 
 TODO:
 1. detect aneuploidy: a data challenge 
