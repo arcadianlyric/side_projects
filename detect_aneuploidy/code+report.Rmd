@@ -1,0 +1,94 @@
+---
+title: "Data challenge"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+#### R shiny app
+A shiny app was made to visualize Y chromosome, one can locate exact regions with losses.  
+1. Open runShiny.R, change path to the folder with data files, ui.R and server.R files.  
+2. Run all scripts in runShiny.R, a window with panel will appear, it may take a few seconds.  
+3. Select one sample to continue, a plot showing read depth on y-axis and location on x-axis will appear.  
+4. Move cursor on the plot, it will display depth and location information.   
+
+#### Copy number prediction 
+Prepare environment, load data, use batch2 as example, same process for batch1.
+```{r}
+setwd('/DataChallenge/Batch_2')
+#savehistory('data-challenge-all.rhistory')
+
+depth = read.csv('Depth.csv', header = T)
+interval = read.csv('Interval_order.csv', header = T)
+```
+
+  
+Visualization. Blue lines are moving average of depth, x-axis as location from chr1 to chrY, y-axis as read depth. Red lines denote the regions for X, Y chromosomes. I did not take into account the chromosomal location for each interval, because not all regions are equally covered. 
+```{r, fig.width=15, fig.height=15}
+library(TTR)
+par(mfrow=c(6,4))
+par(mar=c(2.5,2,2,1))
+# plot simple moving average for all chromosomes
+for(i in 1:24){
+    plot(SMA(depth[,i], n=1000), col="blue", main=paste0('sample',i), type='l', xlab='location', ylab='average depth')
+    abline(v=c(which(interval$Chrom==23)[1], which(interval$Chrom==24)[1]), col='red' )
+}
+dev.copy2pdf(file='SMA-plot.pdf', width=10, height=10)
+# plot X
+for(i in 1:24){
+    plot(depth[(which(interval$Chrom==23)[1]):(which(interval$Chrom==24)[1]-1),i], col="black", main=paste0('sample',i), type='l', xlab='location', ylab='average depth', ylim=c(0,2000))
+}
+dev.copy2pdf(file='raw-x-plot.pdf', width=15, height=15)
+# plot Y
+for(i in 1:24){
+    plot(depth[(which(interval$Chrom==24)[1]):dim(interval)[1],i], col="black", main=paste0('sample',i), type='l', xlab='location', ylab='average depth', ylim=c(0,2500))
+}
+dev.copy2pdf(file='raw-y-plot.pdf', width=15, height=15)
+dev.off()
+```
+
+  
+PCA also helps to distinguish samples with copy number abnormalities.
+```{r, fig.width=6, fig.height=6}
+## pca with top 5000 intervals with high variance 
+plot.pca <- function(ntop, depth){
+    library(matrixStats)
+    rv <-  rowVars(as.matrix(depth))
+    select <-  order(rv, decreasing = TRUE)[seq_len(ntop)]
+    pca <-  prcomp(t(depth[select, ]))
+    plot( pca$x[,1], pca$x[,2], xlab= 'PC1', ylab='PC2' )
+    text( pca$x[,1], pca$x[,2], seq(1,24), pos= 2 )
+}
+plot.pca(5000, depth)
+dev.copy2pdf(file='pca-top5000.pdf', width=8, height=8)
+```
+
+  
+Calculate copy number for chromosome X and Y, write output files
+```{r}
+get.copy <- function(depth){
+    # get average read depth for chr 1-22
+    avg <-  colMeans(depth[1:(which(interval$Chrom==23)[1]-1),], na.rm=T)
+    # get average read depth for X, Y
+    avg.x <- colMeans(depth[(which(interval$Chrom==23)[1]):(which(interval$Chrom==24)[1]-1),], na.rm=T)
+    avg.y <-  colMeans(depth[(which(interval$Chrom==24)[1]):dim(interval)[1],], na.rm=T)
+    # calculate fold change for chr X, Y, divide by 0.5 because chr 1-22 are diploidy
+    copy.x <-  round(avg.x/ avg, digit=2)/0.5
+    copy.y <-  round(avg.y/ avg, digit=2)/0.5
+    copy <-  data.frame(copy.x, copy.y) 
+    copy$id <- rownames(copy)
+    copy <- copy[,c(3,1,2)]
+    return(copy)
+}
+copy <- get.copy(depth)
+write.table(copy, file='estimated-xy-copy.txt', sep='\t', quote=F, row.names = F)
+library(knitr)
+kable(copy[,2:3], caption='Prediction')
+```
+  
+
+Improvement:  
+Given time, rather than taking X and Y chromosome as a whole, more complex method can be developed to take into account regional loss of Y so as to give more precise copy number prediction. It might also be helpful to remove the extreme values and perform normalization across samples. 
+Given .bam and other files, more sophisticated methods, such as bubbletree and MADSEQ from Biodonductor, can be applied to get regional aneuploidy information.
+
