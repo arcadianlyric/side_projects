@@ -11,8 +11,10 @@ The analysis was focused on Total Amount of Payment in USDollars, Recipient Stat
 Figure.1
 The box plot shows log transformed Total Amount of Payment to the medicare recipients/ case as grouped by sates. MN, FM and VT seems to be outliers. Since there are limited cases in FM and VT, only MN is of interest. Wilcoxon test shows the difference between MN and national value is significant.
 The map plots show mean and log transformed median values of Total Amount of Payment, confirmed MN as a outlier. 
+![img](fig1-cost-state.png)
 
 Figure.2
 To find out the reason for MN to be a outlier, I isolated cases from MN. At first I thought it is because of the MAYO clinic, which is the top one national wide and hence may deal with difficult and high-price cases. But I did not found significant difference between mayo and other clinics on average cost. 
 Then I compared the top10 most costly case types by physician specialty as percentage contribution to all payments. In both MN and all states, orthopaedic surgery related cases ("Allopathic & Osteopathic Physicians/ Orthopaedic Surgery/ Adult Reconstructive Orthopaedic Surgery" and "Allopathic & Osteopathic Physicians/ Orthopaedic Surgery") are the most costly, which is not surprising, but more significant in MN as tested by Wilcoxon test.  
 For "Allopathic & Osteopathic Physicians/ Orthopaedic Surgery/ Adult Reconstructive Orthopaedic Surgery", physician under the ID 192705 contributed most to the bill. 
+![img](fig2-adultOth.png)
