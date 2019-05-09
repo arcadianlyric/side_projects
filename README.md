@@ -10,9 +10,9 @@ processed 6GB data of 10 million open payment records from Centers of Medicare &
 4. Alaska volcano map: interactive Rshiny UI  
 
 TODO:  
-3. hadoop hive Yelp review: 
-mined 4million Yelp review to find coolest restaurants for recommendation 
-8. twitter API data mining: 
+1. hadoop hive Yelp review: 
+mined 4million Yelp review to find coolest restaurants for recommendation  
+2. twitter API data mining: 
 studied public awareness of precision medicine, data cleaning (emotion emoji etc.) 
 most co-accurance words are NIH, government initiatives etc., limited public and biotech industry awareness at 2016  
 
