@@ -1,5 +1,5 @@
 ### side_projects
-1. WeChat API data mining
+1. WeChat API data mining  
 geographic and gender distribution of friends  
 2. ml_t2d_NGS_prediction: 
 predict Type2 diabetes with machine learning (sklearn, keras, model ensemble) using RNA-seq data
