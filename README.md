@@ -1,13 +1,15 @@
 ### side_projects
 1. WeChat API data mining
+geographic and gender distribution of friends  
 2. ml_t2d_NGS_prediction: 
 predict Type2 diabetes with machine learning (sklearn, keras, model ensemble) using RNA-seq data
 achieved average accuracy of 0.88
 2. detect aneuploidy: a data challenge  
-build a NGS data aneuploidy classifier with R, interactive UI with Shiny  
+build a NGS data aneuploidy classifier with R, interactive Shiny UI  
 3. healthcare open payment data mining, a Insight hackathon, get-better-with-data:  
 processed 6GB data of 10 million open payment records from Centers of Medicare & Medical Services (CMS), found states with significant high medical payments  
-4. Alaska volcano map: interactive Rshiny UI  
+4. Alaska volcano map:  
+interactive geographic location of volcanos with Rshiny UI  
 
 ![img](img/tech_stack.png)
 
