@@ -24,8 +24,6 @@ A public data set from [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=
 4.Top important genes enriched in metabolic pathways (Metabolic pathways, Pyruvate metabolism etc.), the signature genes seem to be more as results of the disease, not causal ones.  
 ![img](img/david_pathway.png)
 
-### Tech stack
-![img](img/tech_stack.png)
 #### Visualization
 kmean clustering on heatmap, diff between disease and healthy ?  
 interactive RUC with bokeh  
