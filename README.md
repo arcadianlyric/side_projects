@@ -8,7 +8,7 @@ achieved average accuracy of 0.88
 build a NGS data aneuploidy classifier with R, interactive Shiny UI  
 3. healthcare open payment data mining, a Insight hackathon, get-better-with-data:  
 processed 6GB data of 10 million open payment records from Centers of Medicare & Medical Services (CMS), found states with significant high medical payments  
-4. Alaska volcano map:  
+4. volcano map Alaska:  
 interactive geographic location of volcanos with Rshiny UI  
 
 ![img](img/tech_stack.png)
