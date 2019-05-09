@@ -4,9 +4,6 @@
 # 3. Select one sample to continue, a plot showing read on y-axis and location on x-axis will appear.
 # 4. Move cursor on the plot to display read and location information.
 
-# change path first
-setwd('/DataChallenge')
-
 library(shiny)
 library(shinyIncubator)
 library(rsconnect)

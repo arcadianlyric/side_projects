@@ -1,5 +1,3 @@
-# develope R product, week4assignment 
-#setwd('/Users/YC/github/DevPro-week4')
 #install.packages("devtools")
 #devtools::install_github("shiny-incubator", "rstudio")
 

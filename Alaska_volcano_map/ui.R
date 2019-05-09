@@ -1,6 +1,3 @@
-# develope R product, week4assignment 
-#setwd('/Users/YC/github/DevPro-week4')
-
 # progressInit issue
 #devtools::install_github('rstudio/rsconnect')
 library(shiny)
