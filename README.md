@@ -9,8 +9,6 @@ build a NGS data aneuploidy classifier with R, interactive UI with Shiny
 processed 6GB data of 10 million open payment records from Centers of Medicare & Medical Services (CMS), found states with significant high medical payments  
 4. Alaska volcano map: interactive Rshiny UI  
 
-![img](img/tech_stack.png)
-
 TODO:  
 1. hadoop hive Yelp review: 
 mined 4million Yelp review to find coolest restaurants for recommendation  
