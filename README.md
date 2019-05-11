@@ -10,14 +10,15 @@ build a NGS data aneuploidy classifier with R, interactive Shiny UI
 processed 6GB data of 10 million open payment records from Centers of Medicare & Medical Services (CMS), found states with significant high medical payments  
 4. volcano map Alaska:  
 interactive geographic location of volcanos with Rshiny UI  
+2. twitter API data mining: 
+studied public awareness of precision medicine, data cleaning (emotion emoji etc.), made word cloud  
+most co-accurance words are NIH, government initiatives etc., limited public and biotech industry awareness at 2016 
 
 ![img](img/tech_stack.png)
 
 TODO:  
 1. hadoop hive Yelp review: 
 mined 4million Yelp review to find coolest restaurants for recommendation  
-2. twitter API data mining: 
-studied public awareness of precision medicine, data cleaning (emotion emoji etc.), made word cloud  
-most co-accurance words are NIH, government initiatives etc., limited public and biotech industry awareness at 2016  
+ 
 
  
