@@ -17,7 +17,7 @@ TODO:
 1. hadoop hive Yelp review: 
 mined 4million Yelp review to find coolest restaurants for recommendation  
 2. twitter API data mining: 
-studied public awareness of precision medicine, data cleaning (emotion emoji etc.) 
+studied public awareness of precision medicine, data cleaning (emotion emoji etc.), made word cloud  
 most co-accurance words are NIH, government initiatives etc., limited public and biotech industry awareness at 2016  
 
  
