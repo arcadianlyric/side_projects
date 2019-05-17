@@ -2,3 +2,4 @@
 wechat_api/city_geo.txt
 twitter_api/precisionMedicine.pdf
 twitter_api/23andme.pdf
+*.csv
