@@ -83,7 +83,7 @@ ORDER BY review_count DESC
 LIMIT 10;
 ```
 
-funniest resturant
+funniest, coolest resturant
 ```sql
 insert overwrite local directory 'funniest'
     ROW FORMAT DELIMITED 
