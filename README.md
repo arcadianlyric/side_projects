@@ -1,9 +1,9 @@
 ### side_projects
 1. WeChat API data mining  
-geographic and gender distribution of friends  
+geographic and gender distribution of friends (in main repository)  
 2. ml_t2d_NGS_prediction: 
 predict Type2 diabetes with machine learning (sklearn, keras, model ensemble) using RNA-seq data
-achieved average accuracy of 0.88
+achieved average accuracy of 0.88 (in main repository)   
 2. detect aneuploidy: a data challenge  
 build a NGS data aneuploidy classifier with R, interactive Shiny UI  
 3. healthcare open payment data mining, a Insight hackathon, get-better-with-data:  
