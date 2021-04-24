@@ -7,7 +7,7 @@ interactive geographic location of volcanos with Rshiny UI
 ![img](volcano_map_Alaska/locating-Alaska-volcanos/app.png)
 * twitter API data mining (2016): 
 studied public awareness of precision medicine, data cleaning (emotion emoji etc.), made word cloud  
-most co-accurance words are NIH, government initiatives etc., limited public and biotech industry awareness at 2016 
+most co-accurance words are NIH, government initiatives etc., limited public and biotech industry awareness at 2016   
 ![img](twitter_api/precisionMedicine.png)
 * hadoop hive Yelp review (2017): 
 mined 4million Yelp review to find coolest restaurants for recommendation  
